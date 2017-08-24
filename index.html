@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1><center>Blogs for Success</center></h1>
+    <img src="http://d2118lkw40i39g.cloudfront.net/wp-content/uploads/2017/02/djk_2_3x4_1024.png" alt="DJ Kahlid" style = "width:100%;height:220px;">
+
+    <ul>
+        {% for blog in posted_blogs %}
+        <li>
+            <h1 style='text-decoration: underline'>
+                <a href="/blog?id={{ blog.id }}">{{ blog.title }}</a>
+                </h1>
+            <p>{{ blog.body }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
